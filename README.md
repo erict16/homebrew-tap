@@ -10,14 +10,16 @@ brew trust erict16/tap
 brew install --cask ragdoll-mail
 ```
 
-Homebrew asks once to trust a tap that is not its own; that is the second line.
+Homebrew asks once to trust a tap that is not its own; that is the second line. You only need it once for both.
 
 This installs the app and the `ragdoll` command. Update with `brew upgrade --cask ragdoll-mail`.
 
 ## Only the command
 
 ```sh
-brew install erict16/tap/ragdoll
+brew tap erict16/tap
+brew trust erict16/tap
+brew install ragdoll
 ```
 
 This installs only `ragdoll`, the command line, with no app. It runs on Homebrew's Python and does not need an Apple signature, so macOS shows no warning. Update with `brew upgrade ragdoll`. If you already have the app from the cask, you have the command too and don't need this.
